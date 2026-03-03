@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneKey Classic 1S Pure / BTC Only - 代购</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .product {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .product-image {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            border-radius: 24px;
+            padding: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 500px;
+        }
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+        }
+        .product-info h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .product-info .subtitle {
+            font-size: 20px;
+            color: #888;
+            margin-bottom: 24px;
+        }
+        .product-info .badge {
+            display: inline-block;
+            background: #f7931a;
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 32px;
+        }
+        .price {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 32px;
+        }
+        .price .original {
+            font-size: 24px;
+            color: #666;
+            text-decoration: line-through;
+            margin-left: 16px;
+        }
+        .features {
+            margin-bottom: 40px;
+        }
+        .features h3 {
+            font-size: 18px;
+            margin-bottom: 16px;
+            color: #ccc;
+        }
+        .features ul {
+            list-style: none;
+        }
+        .features li {
+            padding: 12px 0;
+            padding-left: 28px;
+            position: relative;
+            color: #aaa;
+        }
+        .features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #00d084;
+            font-weight: bold;
+        }
+        .btn-buy {
+            display: inline-block;
+            background: linear-gradient(135deg, #00d084 0%, #00a86b 100%);
+            color: #fff;
+            padding: 20px 48px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: 100%;
+            text-align: center;
+        }
+        .btn-buy:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 208, 132, 0.3);
+        }
+        .specs {
+            margin-top: 80px;
+            padding-top: 60px;
+            border-top: 1px solid #222;
+        }
+        .specs h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .spec-card {
+            background: #141414;
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid #222;
+        }
+        .spec-card h4 {
+            font-size: 14px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        .spec-card p {
+            font-size: 20px;
+            color: #fff;
+            font-weight: 500;
+        }
+        .product-placeholder {
+            width: 300px;
+            height: 400px;
+            background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .device-body {
+            width: 180px;
+            height: 280px;
+            background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+            border-radius: 24px;
+            box-shadow: 
+                0 10px 30px rgba(0,0,0,0.5),
+                inset 0 1px 0 rgba(255,255,255,0.1);
+            position: relative;
+        }
+        .device-screen {
+            position: absolute;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            height: 100px;
+            background: #0a0a0a;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .device-screen::after {
+            content: 'BTC';
+            color: #f7931a;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .device-button {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            border: 3px solid #444;
+            border-radius: 50%;
+        }
+        @media (max-width: 900px) {
+            .product {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .product-info h1 {
+                font-size: 32px;
+            }
+            .product-image {
+                min-height: 350px;
+                padding: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="product">
+            <div class="product-image">
+                <div class="product-placeholder">
+                    <div class="device-body">
+                        <div class="device-screen"></div>
+                        <div class="device-button"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="badge">BTC Only</span>
+                <h1>OneKey Classic 1S Pure</h1>
+                <p class="subtitle">比特币硬件钱包 · 专为BTC打造</p>
+                <div class="price">
+                    ¥699
+                    <span class="original">¥899</span>
+                </div>
+                <div class="features">
+                    <h3>产品特点</h3>
+                    <ul>
+                        <li>专为比特币设计，仅支持 BTC 资产</li>
+                        <li>EAL 6+ 安全芯片，银行级安全防护</li>
+                        <li>完全开源固件，透明可审计</li>
+                        <li>蓝牙 + USB-C 双模连接</li>
+                        <li>支持比特币多重签名</li>
+                        <li>1.28英寸彩色显示屏，清晰可视</li>
+                        <li>机身仅重 30g，便携易携带</li>
+                    </ul>
+                </div>
+                <button class="btn-buy">立即购买</button>
+            </div>
+        </div>
+
+        <div class="specs">
+            <h2>技术规格</h2>
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <h4>尺寸</h4>
+                    <p>53mm × 35mm × 7.5mm</p>
+                </div>
+                <div class="spec-card">
+                    <h4>重量</h4>
+                    <p>约 30g</p>
+                </div>
+                <div class="spec-card">
+                    <h4>显示屏</h4>
+                    <p>1.28英寸彩色屏幕</p>
+                </div>
+                <div class="spec-card">
+                    <h4>连接方式</h4>
+                    <p>蓝牙 5.0 / USB-C</p>
+                </div>
+                <div class="spec-card">
+                    <h4>安全芯片</h4>
+                    <p>EAL 6+ 认证安全芯片</p>
+                </div>
+                <div class="spec-card">
+                    <h4>支持系统</h4>
+                    <p>iOS / Android / Windows / macOS / Linux</p>
+                </div>
+                <div class="spec-card">
+                    <h4>电池</h4>
+                    <p>100mAh 可充电锂电池</p>
+                </div>
+                <div class="spec-card">
+                    <h4>材质</h4>
+                    <p>航空级铝合金 + 聚碳酸酯</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

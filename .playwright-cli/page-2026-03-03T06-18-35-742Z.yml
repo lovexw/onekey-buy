@@ -1,0 +1,765 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - navigation [ref=e6]:
+      - generic [ref=e11]:
+        - link [ref=e13] [cursor=pointer]:
+          - /url: /zh_CN/
+          - img [ref=e15]
+        - list [ref=e18]:
+          - listitem [ref=e19]:
+            - generic [ref=e22] [cursor=pointer]: 产品
+          - listitem [ref=e23]:
+            - generic [ref=e26] [cursor=pointer]: 应用程序
+          - listitem [ref=e27]:
+            - link "交易 0 Fee" [ref=e30] [cursor=pointer]:
+              - /url: https://app.onekey.so
+              - generic [ref=e31]:
+                - text: 交易
+                - generic [ref=e32]: 0 Fee
+          - listitem [ref=e33]:
+            - link "开发者" [ref=e36] [cursor=pointer]:
+              - /url: https://developer.onekey.so/
+              - generic [ref=e37]: 开发者
+          - listitem [ref=e38]:
+            - generic [ref=e41] [cursor=pointer]: 资源
+          - listitem [ref=e42]:
+            - generic [ref=e45] [cursor=pointer]: 技术支持
+          - listitem [ref=e46]:
+            - link "博客" [ref=e49] [cursor=pointer]:
+              - /url: /blog
+              - generic [ref=e50]: 博客
+        - generic [ref=e51]:
+          - generic [ref=e53] [cursor=pointer]:
+            - img [ref=e54]
+            - generic [ref=e58]: 简体中文
+          - img [ref=e60] [cursor=pointer]
+          - link "下载" [ref=e63] [cursor=pointer]:
+            - /url: /zh_CN/download/
+            - button "下载" [ref=e64]:
+              - text: 下载
+              - img [ref=e67]
+    - main [ref=e70]:
+      - generic [ref=e72]:
+        - generic [ref=e74]:
+          - img [ref=e76] [cursor=pointer]
+          - generic [ref=e79]:
+            - generic [ref=e82]:
+              - img [ref=e84]
+              - img [ref=e85]
+              - img "btc-only3_d1351fca-fa42-4efa-9d06-52adc72b6820" [ref=e86]
+            - generic [ref=e89]:
+              - img [ref=e91]
+              - img [ref=e92]
+              - img "btc-only2_63a1dbdc-a7ad-4477-a258-bc7bb6729d03" [ref=e93]
+            - generic [ref=e96]:
+              - img [ref=e98]
+              - img [ref=e99]
+              - img "btc-only1_52dd5e91-7bb0-498c-88e6-a8243b566cc3" [ref=e100]
+            - generic [ref=e103]:
+              - img [ref=e105]
+              - img [ref=e106]
+              - img "btc-only4_e1d08e71-45fa-4f20-adb3-be54bdf2bdc6" [ref=e107]
+          - img [ref=e109] [cursor=pointer]
+        - generic [ref=e114]:
+          - generic [ref=e115]:
+            - generic [ref=e117]:
+              - generic [ref=e118]:
+                - generic [ref=e119]:
+                  - generic [ref=e120]: 加密硬件钱包
+                  - generic [ref=e123]: OneKey Classic 1S Pure / BTC-Only
+                - generic [ref=e124]: 无电池，专为 HODL 打造。
+              - generic [ref=e127]:
+                - generic [ref=e128]:
+                  - img "EAL 6+" [ref=e129]
+                  - text: EAL 6+
+                - generic [ref=e131]:
+                  - img "蓝牙" [ref=e132]
+                  - generic [ref=e133]: 蓝牙
+                - generic [ref=e135]:
+                  - img "USB-C" [ref=e136]
+                  - generic [ref=e137]: USB-C
+                - generic [ref=e139]:
+                  - img "安全密钥" [ref=e140]
+                  - generic [ref=e141]: 安全密钥
+                - generic [ref=e143]:
+                  - img "全平台支持" [ref=e144]
+                  - generic [ref=e145]: 全平台支持
+                - generic [ref=e147]:
+                  - img "支持 30,000 多种代币" [ref=e148]
+                  - generic [ref=e149]: 支持 30,000 多种代币
+                - generic [ref=e151]:
+                  - img "无电池" [ref=e152]
+                  - generic [ref=e153]: 无电池
+                - generic [ref=e155]:
+                  - img "Clear Signing 预览" [ref=e156]
+                  - generic [ref=e157]: Clear Signing 预览
+                - generic [ref=e159]:
+                  - img "支持 BTC-Only 模式" [ref=e160]
+                  - generic [ref=e161]: 支持 BTC-Only 模式
+            - generic [ref=e162]:
+              - generic [ref=e163]: 选择您的型号
+              - generic [ref=e164]:
+                - button "OneKey Classic 1S OneKey Classic 1S 内置电池 $99" [ref=e166] [cursor=pointer]:
+                  - generic [ref=e168]:
+                    - img [ref=e170]
+                    - img [ref=e171]
+                    - img "OneKey Classic 1S" [ref=e172]
+                  - generic [ref=e173]:
+                    - generic [ref=e174]: OneKey Classic 1S
+                    - generic [ref=e175]: 内置电池
+                  - generic [ref=e177]: $99
+                - button "OneKey Classic 1S Pure OneKey Classic 1S Pure 无电池 $79" [ref=e179] [cursor=pointer]:
+                  - generic [ref=e181]:
+                    - img [ref=e183]
+                    - img [ref=e184]
+                    - img "OneKey Classic 1S Pure" [ref=e185]
+                  - generic [ref=e186]:
+                    - generic [ref=e187]: OneKey Classic 1S Pure
+                    - generic [ref=e188]: 无电池
+                  - generic [ref=e190]: $79
+                - generic [ref=e191]:
+                  - button "OneKey Classic 1S Pure / BTC-Only OneKey Classic 1S Pure / BTC-Only 专为比特币设计·无需电池 $79" [ref=e192] [cursor=pointer]:
+                    - generic [ref=e194]:
+                      - img [ref=e196]
+                      - img [ref=e197]
+                      - img "OneKey Classic 1S Pure / BTC-Only" [ref=e198]
+                    - generic [ref=e199]:
+                      - generic [ref=e200]: OneKey Classic 1S Pure / BTC-Only
+                      - generic [ref=e201]: 专为比特币设计·无需电池
+                    - generic [ref=e203]: $79
+                  - paragraph [ref=e206]:
+                    - text: 出厂预装 BTC 专用系统。可随时切换至多币种系统。
+                    - link "了解更多" [ref=e207] [cursor=pointer]:
+                      - /url: https://help.onekey.so/articles/13276348?url_locale=zh-CN
+            - generic [ref=e208]:
+              - generic [ref=e209]: 套装更优惠
+              - generic [ref=e210]:
+                - button "OneKey KeyTag OneKey KeyTag 由航空级钛合金制成的强大钱包备份套件，内含 2 个 KeyTag。 +$59" [ref=e212] [cursor=pointer]:
+                  - generic [ref=e214]:
+                    - img [ref=e216]
+                    - img [ref=e217]
+                    - img "OneKey KeyTag" [ref=e218]
+                  - generic [ref=e219]:
+                    - generic [ref=e220]: OneKey KeyTag
+                    - generic [ref=e221]: 由航空级钛合金制成的强大钱包备份套件，内含 2 个 KeyTag。
+                  - generic [ref=e223]: +$59
+                - button "OneKey Sifu OneKey Sifu 通过一对一的在线会话，获得有关设置您的 OneKey 硬件钱包的帮助。 +$99" [ref=e225] [cursor=pointer]:
+                  - generic [ref=e227]:
+                    - img [ref=e229]
+                    - img [ref=e230]
+                    - img "OneKey Sifu" [ref=e231]
+                  - generic [ref=e232]:
+                    - generic [ref=e233]: OneKey Sifu
+                    - generic [ref=e234]: 通过一对一的在线会话，获得有关设置您的 OneKey 硬件钱包的帮助。
+                  - generic [ref=e236]: +$99
+            - paragraph [ref=e238]:
+              - text: 了解更多请参阅
+              - link "OneKey Classic 1S 快速入门指南" [ref=e239] [cursor=pointer]:
+                - /url: /zh_CN/start/onekey-classic-1s/
+              - text: 。
+            - generic [ref=e240]:
+              - generic [ref=e242] [cursor=pointer]:
+                - generic [ref=e243]: 选择配送目的地
+                - img [ref=e244]
+              - generic [ref=e246]:
+                - generic [ref=e248]: $79
+                - generic [ref=e249]:
+                  - button "加入购物袋" [ref=e251] [cursor=pointer]
+                  - button "现在购买" [ref=e252] [cursor=pointer]:
+                    - generic [ref=e254]: 现在购买
+          - generic [ref=e255]:
+            - generic [ref=e257]:
+              - img "supported-payment-0" [ref=e259]
+              - img "supported-payment-1" [ref=e261]
+              - img "supported-payment-2" [ref=e263]
+            - generic [ref=e264]:
+              - img [ref=e265]
+              - generic [ref=e269]: 订单满 99 美元全球免费送货
+            - generic [ref=e270]:
+              - img [ref=e271]
+              - generic [ref=e275]: 24/7 客服支持
+            - link "邮递及退货" [ref=e277] [cursor=pointer]:
+              - /url: https://help.onekey.so/articles/11461245?url_locale=zh-CN
+      - generic [ref=e278]:
+        - generic [ref=e279]:
+          - heading "高级安全功能" [level=3] [ref=e281]
+          - generic [ref=e282]:
+            - generic [ref=e284]:
+              - generic [ref=e286]:
+                - img [ref=e288]
+                - img [ref=e289]
+              - generic [ref=e290]:
+                - heading "6 分钟离线设置 安全一步到位。" [level=4] [ref=e291]
+                - paragraph [ref=e292]: 通过完全离线入网，几分钟内即可完成加密安全设置。您的密钥永不触网，由 EAL6+ 安全芯片与加密连接保护。
+            - generic [ref=e294]:
+              - generic [ref=e296]:
+                - img [ref=e298]
+                - img [ref=e299]
+              - generic [ref=e300]:
+                - heading "放心签名" [level=4] [ref=e301]
+                - paragraph [ref=e302]: 确认前查看每一项详情，并使用 SignGuard 识别诈骗与威胁，有助于减少钓鱼和代价高昂的错误。
+            - generic [ref=e304]:
+              - generic [ref=e306]:
+                - img [ref=e308]
+                - img [ref=e309]
+              - generic [ref=e310]:
+                - heading "一个钱包，为你的资产而生。" [level=4] [ref=e311]
+                - paragraph [ref=e312]: 根据需求选择钱包版本，从仅支持比特币的版本到支持多链多资产的全功能钱包，并可无缝配合 OneKey App 及主流钱包软件使用。
+            - generic [ref=e314]:
+              - generic [ref=e316]:
+                - img [ref=e318]
+                - img [ref=e319]
+              - generic [ref=e320]:
+                - heading "可验证的代码，经审计的安全。" [level=4] [ref=e321]
+                - paragraph [ref=e322]: 固件与应用开源且可复现构建，可在 GitHub 上独立验证，并经过第三方安全审计。
+            - generic [ref=e324]:
+              - generic [ref=e326]:
+                - img [ref=e328]
+                - img [ref=e329]
+              - generic [ref=e330]:
+                - heading "EAL6+ 安全芯片，硬件级保护" [level=4] [ref=e331]
+                - paragraph [ref=e332]: 采用 EAL6+ 安全芯片，用于安全存储密钥和执行关键操作，可抵御物理篡改与侧信道攻击。
+            - generic [ref=e334]:
+              - generic [ref=e336]:
+                - img [ref=e338]
+                - img [ref=e339]
+              - generic [ref=e340]:
+                - heading "从开箱到日常使用的安全" [level=4] [ref=e341]
+                - paragraph [ref=e342]: 收货时检查防篡改包装，首次激活时验证正版固件，日常使用中通过 PIN 保护安全。多次失败或检测到篡改后，数据将自动清除。
+          - link "了解更多" [ref=e344] [cursor=pointer]:
+            - /url: /zh_CN/products/onekey-classic-1s-series/
+            - button "了解更多" [ref=e345]
+        - generic [ref=e348]:
+          - generic [ref=e349]:
+            - heading "包装内包含" [level=3] [ref=e350]
+            - generic [ref=e351]:
+              - generic [ref=e352]: OneKey Classic 1S
+              - generic [ref=e353]: USB-C 数据线
+              - generic [ref=e354]: 恢复表 x3
+          - generic [ref=e356]:
+            - img [ref=e358]
+            - img [ref=e359]
+            - img "Whats In the Classic 1S Box" [ref=e360]
+        - generic [ref=e363]:
+          - generic [ref=e364]:
+            - heading "技术规格" [level=3] [ref=e365]
+            - radiogroup "Time range selector" [ref=e367]:
+              - generic [ref=e369] [cursor=pointer]: OneKey Classic 1S
+              - generic [ref=e370] [cursor=pointer]: OneKey Classic 1S Pure
+              - generic [ref=e371] [cursor=pointer]: Bitcoin-only
+            - generic [ref=e372]:
+              - generic [ref=e374] [cursor=pointer]:
+                - generic [ref=e375]: 尺寸和重量
+                - generic [ref=e376]:
+                  - img [ref=e379]
+                  - img [ref=e382]
+              - generic [ref=e385] [cursor=pointer]:
+                - generic [ref=e386]: 芯片和连接器
+                - generic [ref=e387]:
+                  - img [ref=e390]
+                  - img [ref=e393]
+              - generic [ref=e396] [cursor=pointer]:
+                - generic [ref=e397]: 显示
+                - generic [ref=e398]:
+                  - img [ref=e401]
+                  - img [ref=e404]
+              - generic [ref=e407] [cursor=pointer]:
+                - generic [ref=e408]: 温度范围
+                - generic [ref=e409]:
+                  - img [ref=e412]
+                  - img [ref=e415]
+              - generic [ref=e418] [cursor=pointer]:
+                - generic [ref=e419]: 电源和电池
+                - generic [ref=e420]:
+                  - img [ref=e423]
+                  - img [ref=e426]
+              - generic [ref=e429] [cursor=pointer]:
+                - generic [ref=e430]: 无线
+                - generic [ref=e431]:
+                  - img [ref=e434]
+                  - img [ref=e437]
+              - generic [ref=e440] [cursor=pointer]:
+                - generic [ref=e441]: 材料
+                - generic [ref=e442]:
+                  - img [ref=e445]
+                  - img [ref=e448]
+              - generic [ref=e451] [cursor=pointer]:
+                - generic [ref=e452]: 兼容性
+                - generic [ref=e453]:
+                  - img [ref=e456]
+                  - img [ref=e459]
+              - generic [ref=e462] [cursor=pointer]:
+                - generic [ref=e463]: 产品套装
+                - generic [ref=e464]:
+                  - img [ref=e467]
+                  - img [ref=e470]
+          - generic [ref=e473]:
+            - img [ref=e475]
+            - img [ref=e476]
+            - img "Tech Specs" [ref=e477]
+        - generic [ref=e478]:
+          - heading "有问题吗?" [level=3] [ref=e480]
+          - generic [ref=e481]:
+            - list [ref=e483]:
+              - listitem [ref=e484]:
+                - generic [ref=e485] [cursor=pointer]:
+                  - generic [ref=e486]:
+                    - img [ref=e487]
+                    - generic [ref=e491]: 我在哪里可以追踪我的订单?
+                    - generic [ref=e493]: 订单发货后,我们会通过电子邮件发送追踪链接。您也可以在订单页面上找到它。标签创建后,追踪信息可能需要 24 到 48 小时才会更新。
+                  - button "更多" [ref=e494]:
+                    - img [ref=e495]
+                    - text: 更多
+              - listitem [ref=e497]:
+                - generic [ref=e498] [cursor=pointer]:
+                  - generic [ref=e499]:
+                    - img [ref=e500]
+                    - generic [ref=e503]: 我可以更改地址或取消订单吗?
+                    - generic [ref=e505]: 如果您的订单尚未发货,我们或许可以提供帮助。请尽快联系客服并提供您的订单号。订单发货后通常无法进行更改。
+                  - button "更多" [ref=e506]:
+                    - img [ref=e507]
+                    - text: 更多
+              - listitem [ref=e509]:
+                - generic [ref=e510] [cursor=pointer]:
+                  - generic [ref=e511]:
+                    - img [ref=e512]
+                    - generic [ref=e516]: 我的物流显示已送达,但我没有收到包裹。
+                    - generic [ref=e518]: 请先与家人、邻居、楼宇工作人员和当地快递公司核实。如果仍然找不到,请联系客服并提供您的订单号和物流详情。
+                  - button "更多" [ref=e519]:
+                    - img [ref=e520]
+                    - text: 更多
+              - listitem [ref=e522]:
+                - generic [ref=e523]:
+                  - generic [ref=e524]:
+                    - img [ref=e525]
+                    - generic [ref=e528]: 我可以在同一次结账时使用折扣码和礼品卡吗?
+                    - generic [ref=e530]: 在大多数情况下,是的。折扣会先应用,然后礼品卡支付剩余余额。
+                  - button:
+                    - img
+              - listitem [ref=e531]:
+                - generic [ref=e532] [cursor=pointer]:
+                  - generic [ref=e533]:
+                    - img [ref=e534]
+                    - generic [ref=e536]: 我的加密货币付款何时确认?
+                    - generic [ref=e538]: 您的订单将在完成所需的网络确认后得到确认。请在结账时显示的正确网络上支付准确金额。如果您需要帮助,请携带交易哈希值联系客服。
+                  - button "更多" [ref=e539]:
+                    - img [ref=e540]
+                    - text: 更多
+              - listitem [ref=e542]:
+                - generic [ref=e543]:
+                  - generic [ref=e544]:
+                    - img [ref=e545]
+                    - generic [ref=e548]: 如何申请退货或保修服务?
+                    - generic [ref=e550]: 请联系我们的支持团队，提供您的订单详情和问题的简要描述。我们将指导您完成后续步骤。
+                  - button:
+                    - img
+            - generic:
+              - button:
+                - img
+              - button [ref=e551] [cursor=pointer]:
+                - img [ref=e552]
+        - generic [ref=e556]:
+          - generic [ref=e557]:
+            - generic [ref=e558]:
+              - generic [ref=e559]:
+                - generic [ref=e560]: "4.8"
+                - generic [ref=e561]:
+                  - generic [ref=e562]:
+                    - img [ref=e563]
+                    - img [ref=e565]
+                    - img [ref=e567]
+                    - img [ref=e569]
+                    - img [ref=e571]
+                  - generic [ref=e573]: 基于 218 条评价
+              - generic [ref=e574]:
+                - generic [ref=e575]:
+                  - generic [ref=e576]:
+                    - generic [ref=e577]: "5"
+                    - img [ref=e578]
+                  - generic [ref=e582]: "184"
+                - generic [ref=e583]:
+                  - generic [ref=e584]:
+                    - generic [ref=e585]: "4"
+                    - img [ref=e586]
+                  - generic [ref=e590]: "27"
+                - generic [ref=e591]:
+                  - generic [ref=e592]:
+                    - generic [ref=e593]: "3"
+                    - img [ref=e594]
+                  - generic [ref=e598]: "7"
+                - generic [ref=e599]:
+                  - generic [ref=e600]:
+                    - generic [ref=e601]: "2"
+                    - img [ref=e602]
+                  - generic [ref=e605]: "0"
+                - generic [ref=e606]:
+                  - generic [ref=e607]:
+                    - generic [ref=e608]: "1"
+                    - img [ref=e609]
+                  - generic [ref=e612]: "0"
+              - generic [ref=e613]: 97% 推荐
+            - generic [ref=e615]:
+              - heading "评价图片" [level=4] [ref=e616]
+              - generic [ref=e618]:
+                - list [ref=e620]:
+                  - button "1768962425__1768962422401-1keyc1s__original.png" [ref=e621] [cursor=pointer]:
+                    - generic [ref=e622]:
+                      - img [ref=e624]
+                      - img [ref=e625]
+                      - img "1768962425__1768962422401-1keyc1s__original.png" [ref=e626]
+                  - button "1767186290__1767186288058-1000014102__original.jpg" [ref=e627] [cursor=pointer]:
+                    - generic [ref=e628]:
+                      - img [ref=e630]
+                      - img [ref=e631]
+                      - img "1767186290__1767186288058-1000014102__original.jpg" [ref=e632]
+                  - button "1766893847__1766893844350-photo_2025-12-28_11-46-59__original.jpg" [ref=e633] [cursor=pointer]:
+                    - generic [ref=e634]:
+                      - img [ref=e636]
+                      - img [ref=e637]
+                      - img "1766893847__1766893844350-photo_2025-12-28_11-46-59__original.jpg" [ref=e638]
+                  - button "1763425624__1763425601922-1000038831__original.jpg" [ref=e639] [cursor=pointer]:
+                    - generic [ref=e640]:
+                      - img [ref=e642]
+                      - img [ref=e643]
+                      - img "1763425624__1763425601922-1000038831__original.jpg" [ref=e644]
+                  - button "1763220498__1763220491763-20251108_164953__original.jpg" [ref=e645] [cursor=pointer]:
+                    - generic [ref=e646]:
+                      - img [ref=e648]
+                      - img [ref=e649]
+                      - img "1763220498__1763220491763-20251108_164953__original.jpg" [ref=e650]
+                  - button "1762758111__1762758107533-05greentaradharmamandala__original.jpg" [ref=e651] [cursor=pointer]:
+                    - generic [ref=e652]:
+                      - img [ref=e654]
+                      - img [ref=e655]
+                      - img "1762758111__1762758107533-05greentaradharmamandala__original.jpg" [ref=e656]
+                  - button "1762509312__1762509305968-img_4222__original.jpeg" [ref=e657] [cursor=pointer]:
+                    - generic [ref=e658]:
+                      - img [ref=e660]
+                      - img [ref=e661]
+                      - img "1762509312__1762509305968-img_4222__original.jpeg" [ref=e662]
+                  - button "1759925941__1759925938808-og-onekey-classic__original.jpg" [ref=e663] [cursor=pointer]:
+                    - generic [ref=e664]:
+                      - img [ref=e666]
+                      - img [ref=e667]
+                      - img "1759925941__1759925938808-og-onekey-classic__original.jpg" [ref=e668]
+                  - button "1759465069__1759465066861-img_3833__original.jpeg" [ref=e669] [cursor=pointer]:
+                    - generic [ref=e670]:
+                      - img [ref=e672]
+                      - img [ref=e673]
+                      - img "1759465069__1759465066861-img_3833__original.jpeg" [ref=e674]
+                  - button "1758056240__1758056222834-1000114231__original.jpg" [ref=e675] [cursor=pointer]:
+                    - generic [ref=e676]:
+                      - img [ref=e678]
+                      - img [ref=e679]
+                      - img "1758056240__1758056222834-1000114231__original.jpg" [ref=e680]
+                  - button "1754734323__1754734310542-image__original.jpg" [ref=e681] [cursor=pointer]:
+                    - generic [ref=e682]:
+                      - img [ref=e684]
+                      - img [ref=e685]
+                      - img "1754734323__1754734310542-image__original.jpg" [ref=e686]
+                - button [ref=e688] [cursor=pointer]:
+                  - img [ref=e689]
+          - generic [ref=e692]:
+            - generic [ref=e693]:
+              - generic [ref=e694]:
+                - button "全部评价 (218)" [ref=e695] [cursor=pointer]
+                - button "5" [ref=e696] [cursor=pointer]:
+                  - generic [ref=e697]: "5"
+                  - img [ref=e698]
+                - button "4" [ref=e700] [cursor=pointer]:
+                  - generic [ref=e701]: "4"
+                  - img [ref=e702]
+                - button "3" [ref=e704] [cursor=pointer]:
+                  - generic [ref=e705]: "3"
+                  - img [ref=e706]
+                - button "2" [ref=e708] [cursor=pointer]:
+                  - generic [ref=e709]: "2"
+                  - img [ref=e710]
+                - button "1" [ref=e712] [cursor=pointer]:
+                  - generic [ref=e713]: "1"
+                  - img [ref=e714]
+              - generic [ref=e717] [cursor=pointer]:
+                - text: 最高评分
+                - img [ref=e718]
+            - generic [ref=e722]:
+              - generic [ref=e724]:
+                - generic [ref=e725]:
+                  - generic [ref=e726]: 匿名
+                  - generic [ref=e727]:
+                    - img [ref=e728]
+                    - img [ref=e730]
+                    - img [ref=e732]
+                    - img [ref=e734]
+                    - img [ref=e736]
+                  - generic [ref=e738]: 2026/2/21
+                - generic [ref=e739]:
+                  - generic [ref=e740]: 非常好用，希望继续加油！
+                  - generic [ref=e741]: 非常好用，希望继续加油！
+              - generic [ref=e743]:
+                - generic [ref=e744]:
+                  - generic [ref=e745]: 匿名
+                  - generic [ref=e746]:
+                    - img [ref=e747]
+                    - img [ref=e749]
+                    - img [ref=e751]
+                    - img [ref=e753]
+                    - img [ref=e755]
+                  - generic [ref=e757]: 2026/2/21
+                - generic [ref=e758]:
+                  - generic [ref=e759]: nice product
+                  - generic [ref=e760]: nice product ,very safelly
+              - generic [ref=e762]:
+                - generic [ref=e763]:
+                  - generic [ref=e764]: Maria M.
+                  - generic [ref=e765]:
+                    - img [ref=e766]
+                    - img [ref=e768]
+                    - img [ref=e770]
+                    - img [ref=e772]
+                    - img [ref=e774]
+                  - generic [ref=e776]: 2026/2/18
+                - generic [ref=e777]:
+                  - generic [ref=e778]: Great but please add support for more chains/coins
+                  - generic [ref=e779]: I like it. Easy to use and doesn't require a phone. I do wish it could handle HBAR and a few other coins but other than that it's great.
+              - generic [ref=e781]:
+                - generic [ref=e782]:
+                  - generic [ref=e783]: Ursula L.
+                  - generic [ref=e784]:
+                    - img [ref=e785]
+                    - img [ref=e787]
+                    - img [ref=e789]
+                    - img [ref=e791]
+                    - img [ref=e793]
+                  - generic [ref=e795]: 2026/2/15
+                - generic [ref=e796]:
+                  - generic [ref=e797]: Ich bin erst am Anfang
+                  - generic [ref=e798]: Ich bin erst am Anfang. Erst ein kleiner betrag auf OneKey übertragen.
+              - generic [ref=e800]:
+                - generic [ref=e801]:
+                  - generic [ref=e802]: Volvin I.
+                  - generic [ref=e803]:
+                    - img [ref=e804]
+                    - img [ref=e806]
+                    - img [ref=e808]
+                    - img [ref=e810]
+                    - img [ref=e812]
+                  - generic [ref=e814]: 2026/2/14
+                - generic [ref=e815]:
+                  - generic [ref=e816]: Easy to use
+                  - generic [ref=e817]: Easy to use
+              - button "加载更多" [ref=e819] [cursor=pointer]
+    - contentinfo [ref=e820]:
+      - heading "页脚" [level=2] [ref=e821]
+      - generic [ref=e823]:
+        - generic [ref=e824]:
+          - generic [ref=e825]:
+            - img [ref=e826]
+            - generic [ref=e830]: SatoKey Group 成员之一
+            - generic [ref=e833] [cursor=pointer]:
+              - generic [ref=e834]: 简体中文
+              - img [ref=e835]
+          - generic [ref=e838]:
+            - generic [ref=e839]:
+              - link [ref=e840] [cursor=pointer]:
+                - /url: https://x.com/intent/follow?screen_name=OneKeyCN
+                - img [ref=e841]
+              - link [ref=e843] [cursor=pointer]:
+                - /url: https://github.com/OneKeyHQ/
+                - img [ref=e844]
+            - generic [ref=e846]:
+              - generic [ref=e847]: 付款方式
+              - generic [ref=e848]:
+                - img [ref=e849]
+                - img [ref=e863]
+                - img [ref=e883]
+            - generic [ref=e916]:
+              - link [ref=e917] [cursor=pointer]:
+                - /url: https://github.com/OneKeyHQ
+                - img [ref=e918]
+              - img [ref=e921]
+            - generic [ref=e942]: 2019年至今｜OneKey Limited 版权所有
+        - generic [ref=e944]:
+          - generic [ref=e945]:
+            - heading "产品" [level=3] [ref=e946]
+            - list [ref=e947]:
+              - listitem [ref=e948]:
+                - link "OneKey Pro" [ref=e949] [cursor=pointer]:
+                  - /url: /zh_CN/products/onekey-pro/
+              - listitem [ref=e950]:
+                - link "OneKey Classic 1S" [ref=e951] [cursor=pointer]:
+                  - /url: /zh_CN/products/onekey-classic-1s-series/
+              - listitem [ref=e952]:
+                - link "OneKey Classic 1S Pure" [ref=e953] [cursor=pointer]:
+                  - /url: /zh_CN/products/onekey-classic-1s-series/
+              - listitem [ref=e954]:
+                - link "OneKey Lite" [ref=e955] [cursor=pointer]:
+                  - /url: /zh_CN/products/onekey-lite/
+              - listitem [ref=e956]:
+                - link "查看所有产品" [ref=e957] [cursor=pointer]:
+                  - /url: /zh_CN/shop/
+          - generic [ref=e958]:
+            - heading "全球商店" [level=3] [ref=e959]
+            - list [ref=e960]:
+              - listitem [ref=e961]:
+                - link "全球商店" [ref=e962] [cursor=pointer]:
+                  - /url: https://shop.onekey.so
+              - listitem [ref=e963]:
+                - link "亚马逊日本" [ref=e964] [cursor=pointer]:
+                  - /url: https://www.amazon.co.jp/stores/OneKey/page/A5D41D1F-05BA-4F0E-AAD6-02CED98C7A30
+              - listitem [ref=e965]:
+                - link "亚马逊美国、加拿大和墨西哥" [ref=e966] [cursor=pointer]:
+                  - /url: https://www.amazon.com/stores/OneKey/page/4A384DC3-FA14-4173-AF75-B6B202C6662A
+              - listitem [ref=e967]:
+                - link "亚马逊德国" [ref=e968] [cursor=pointer]:
+                  - /url: https://www.amazon.de/-/en/stores/OneKey/page/000B6454-AF32-4479-A1BB-1B059E3605B3
+              - listitem [ref=e969]:
+                - link "有赞中国" [ref=e970] [cursor=pointer]:
+                  - /url: https://h5.youzan.com/v2/showcase/homepage?alias=UeioSM9PkX&showRetailComps=1
+          - generic [ref=e971]:
+            - heading "应用程序" [level=3] [ref=e972]
+            - list [ref=e973]:
+              - listitem [ref=e974]:
+                - link "macOS" [ref=e975] [cursor=pointer]:
+                  - /url: /zh_CN/download/?client=mac
+              - listitem [ref=e976]:
+                - link "Windows" [ref=e977] [cursor=pointer]:
+                  - /url: /zh_CN/download/?client=windows
+              - listitem [ref=e978]:
+                - link "iOS" [ref=e979] [cursor=pointer]:
+                  - /url: /zh_CN/download/?client=ios
+              - listitem [ref=e980]:
+                - link "Android" [ref=e981] [cursor=pointer]:
+                  - /url: /zh_CN/download/?client=android
+              - listitem [ref=e982]:
+                - link "Chrome" [ref=e983] [cursor=pointer]:
+                  - /url: /zh_CN/download/?client=browser
+              - listitem [ref=e984]:
+                - link "Linux" [ref=e985] [cursor=pointer]:
+                  - /url: /zh_CN/download/?client=linux
+          - generic [ref=e986]:
+            - heading "服务" [level=3] [ref=e987]
+            - list [ref=e988]:
+              - listitem [ref=e989]:
+                - link "闪兑" [ref=e990] [cursor=pointer]:
+                  - /url: https://app.onekey.so/swap
+              - listitem [ref=e991]:
+                - link "支持的加密货币" [ref=e992] [cursor=pointer]:
+                  - /url: /zh_CN/cryptos/
+              - listitem [ref=e993]:
+                - link "助记词生成器" [ref=e994] [cursor=pointer]:
+                  - /url: https://bip39.onekey.so/
+              - listitem [ref=e995]:
+                - link "EIPs" [ref=e996] [cursor=pointer]:
+                  - /url: https://help.onekey.so/articles/11461314?url_locale=zh-CN
+          - generic [ref=e997]:
+            - heading "开发者" [level=3] [ref=e998]
+            - list [ref=e999]:
+              - listitem [ref=e1000]:
+                - link "开发者门户" [ref=e1001] [cursor=pointer]:
+                  - /url: https://developer.onekey.so/
+          - generic [ref=e1002]:
+            - heading "学习" [level=3] [ref=e1003]
+            - list [ref=e1004]:
+              - listitem [ref=e1005]:
+                - link "为什么选择 OneKey" [ref=e1006] [cursor=pointer]:
+                  - /url: /zh_CN/why/
+              - listitem [ref=e1007]:
+                - link "为什么需要 OneKey" [ref=e1008] [cursor=pointer]:
+                  - /url: /zh_CN/why-you-need-onekey/
+              - listitem [ref=e1009]:
+                - link "安全架构" [ref=e1010] [cursor=pointer]:
+                  - /url: /zh_CN/security/
+              - listitem [ref=e1011]:
+                - link "博客" [ref=e1012] [cursor=pointer]:
+                  - /url: /blog
+          - generic [ref=e1013]:
+            - heading "解决方案" [level=3] [ref=e1014]
+            - list [ref=e1015]:
+              - listitem [ref=e1016]:
+                - link "企业解决方案" [ref=e1017] [cursor=pointer]:
+                  - /url: /zh_CN/enterprise/
+              - listitem [ref=e1018]:
+                - link "推荐返佣" [ref=e1019] [cursor=pointer]:
+                  - /url: /zh_CN/affiliate-program/
+              - listitem [ref=e1020]:
+                - link "联名产品" [ref=e1021] [cursor=pointer]:
+                  - /url: /zh_CN/co-branded-partnership/
+              - listitem [ref=e1022]:
+                - link "官方经销商" [ref=e1023] [cursor=pointer]:
+                  - /url: https://help.onekey.so/articles/11461258?url_locale=zh-CN
+          - generic [ref=e1024]:
+            - heading "技术支持" [level=3] [ref=e1025]
+            - list [ref=e1026]:
+              - listitem [ref=e1027]:
+                - link "帮助中心" [ref=e1028] [cursor=pointer]:
+                  - /url: https://help.onekey.so/?url_locale=zh-CN
+              - listitem [ref=e1029]:
+                - link "提交工单" [ref=e1030] [cursor=pointer]:
+                  - /url: https://help.onekey.so/hc/requests/new?url_locale=zh-CN
+              - listitem [ref=e1031]:
+                - link "固件升级" [ref=e1032] [cursor=pointer]:
+                  - /url: https://firmware.onekey.so
+          - generic [ref=e1033]:
+            - heading "关于" [level=3] [ref=e1034]
+            - list [ref=e1035]:
+              - listitem [ref=e1036]:
+                - link "公司信息" [ref=e1037] [cursor=pointer]:
+                  - /url: https://help.onekey.so/articles/11461294?url_locale=zh-CN
+              - listitem [ref=e1038]:
+                - link "工作机会" [ref=e1039] [cursor=pointer]:
+                  - /url: https://onekeyhq.atlassian.net/wiki/spaces/OC/overview
+                - generic [ref=e1040]: 招聘中
+              - listitem [ref=e1041]:
+                - link "媒体资料" [ref=e1042] [cursor=pointer]:
+                  - /url: https://help.onekey.so/articles/11461296?url_locale=zh-CN
+              - listitem [ref=e1043]:
+                - link "隐私政策" [ref=e1044] [cursor=pointer]:
+                  - /url: https://help.onekey.so/articles/11461298?url_locale=zh-CN
+              - listitem [ref=e1045]:
+                - link "用户协议" [ref=e1046] [cursor=pointer]:
+                  - /url: https://help.onekey.so/articles/11461297?url_locale=zh-CN
+              - listitem [ref=e1047]:
+                - link "官方成员验证" [ref=e1048] [cursor=pointer]:
+                  - /url: /zh_CN/team-verification/
+          - generic [ref=e1049]:
+            - heading "加密资产" [level=3] [ref=e1050]
+            - list [ref=e1051]:
+              - listitem [ref=e1052]:
+                - link "比特币钱包" [ref=e1053] [cursor=pointer]:
+                  - /url: https://onekey.so/cryptos/bitcoin/
+              - listitem [ref=e1054]:
+                - link "以太坊钱包" [ref=e1055] [cursor=pointer]:
+                  - /url: https://onekey.so/cryptos/ethereum/
+              - listitem [ref=e1056]:
+                - link "Solana 钱包" [ref=e1057] [cursor=pointer]:
+                  - /url: https://onekey.so/cryptos/solana/
+              - listitem [ref=e1058]:
+                - link "XRP 钱包" [ref=e1059] [cursor=pointer]:
+                  - /url: https://onekey.so/cryptos/ripple/
+              - listitem [ref=e1060]:
+                - link "USDT 钱包" [ref=e1061] [cursor=pointer]:
+                  - /url: https://onekey.so/cryptos/tether/
+              - listitem [ref=e1062]:
+                - link "BNB 钱包" [ref=e1063] [cursor=pointer]:
+                  - /url: https://onekey.so/cryptos/bnb/
+              - listitem [ref=e1064]:
+                - link "查看所有钱包" [ref=e1065] [cursor=pointer]:
+                  - /url: https://onekey.so/cryptos/
+          - generic [ref=e1066]:
+            - heading "安全 & 透明度" [level=3] [ref=e1067]
+            - list [ref=e1068]:
+              - listitem [ref=e1069]:
+                - link "在 GitHub 上的开源" [ref=e1070] [cursor=pointer]:
+                  - /url: https://github.com/OneKeyHQ/
+              - listitem [ref=e1071]:
+                - link "经过SlowMist审核" [ref=e1072] [cursor=pointer]:
+                  - /url: https://onekey.so/blog/updates/one-key-has-passed-a-security-audit-by-slow-mist/
+              - listitem [ref=e1073]:
+                - link "ISO/IEC 27001 认证" [ref=e1074] [cursor=pointer]:
+                  - /url: https://onekey.so/blog/updates/one-key-iso-iec-27001/
+              - listitem [ref=e1075]:
+                - link "EU NB 认证 (EN 18031)" [ref=e1076] [cursor=pointer]:
+                  - /url: https://onekey.so/blog/ecosystem/onekey-pro-passes-eu-en-18031-cybersecurity-certification/
+  - button "Load Chat" [ref=e1077] [cursor=pointer]:
+    - img [ref=e1079]
+    - img [ref=e1082]
