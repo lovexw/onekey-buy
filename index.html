@@ -4,288 +4,195 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OneKey Classic 1S Pure / BTC Only - 代购</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: #0a0a0a;
-            color: #fff;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        .product {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        .product-image {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-            border-radius: 24px;
-            padding: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 500px;
-        }
-        .product-image img {
-            max-width: 100%;
-            height: auto;
-            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
-        }
-        .product-info h1 {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            line-height: 1.2;
-        }
-        .product-info .subtitle {
-            font-size: 20px;
-            color: #888;
-            margin-bottom: 24px;
-        }
-        .product-info .badge {
-            display: inline-block;
-            background: #f7931a;
-            color: #000;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 32px;
-        }
-        .price {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 32px;
-        }
-        .price .original {
-            font-size: 24px;
-            color: #666;
-            text-decoration: line-through;
-            margin-left: 16px;
-        }
-        .features {
-            margin-bottom: 40px;
-        }
-        .features h3 {
-            font-size: 18px;
-            margin-bottom: 16px;
-            color: #ccc;
-        }
-        .features ul {
-            list-style: none;
-        }
-        .features li {
-            padding: 12px 0;
-            padding-left: 28px;
-            position: relative;
-            color: #aaa;
-        }
-        .features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #00d084;
-            font-weight: bold;
-        }
-        .btn-buy {
-            display: inline-block;
-            background: linear-gradient(135deg, #00d084 0%, #00a86b 100%);
-            color: #fff;
-            padding: 20px 48px;
-            border-radius: 12px;
-            font-size: 18px;
-            font-weight: 600;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-            width: 100%;
-            text-align: center;
-        }
-        .btn-buy:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 208, 132, 0.3);
-        }
-        .specs {
-            margin-top: 80px;
-            padding-top: 60px;
-            border-top: 1px solid #222;
-        }
-        .specs h2 {
-            font-size: 32px;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-        .specs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-        }
-        .spec-card {
-            background: #141414;
-            padding: 32px;
-            border-radius: 16px;
-            border: 1px solid #222;
-        }
-        .spec-card h4 {
-            font-size: 14px;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-        }
-        .spec-card p {
-            font-size: 20px;
-            color: #fff;
-            font-weight: 500;
-        }
-        .product-placeholder {
-            width: 300px;
-            height: 400px;
-            background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        .device-body {
-            width: 180px;
-            height: 280px;
-            background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
-            border-radius: 24px;
-            box-shadow: 
-                0 10px 30px rgba(0,0,0,0.5),
-                inset 0 1px 0 rgba(255,255,255,0.1);
-            position: relative;
-        }
-        .device-screen {
-            position: absolute;
-            top: 24px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 140px;
-            height: 100px;
-            background: #0a0a0a;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .device-screen::after {
-            content: 'BTC';
-            color: #f7931a;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .device-button {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 50px;
-            border: 3px solid #444;
-            border-radius: 50%;
-        }
-        @media (max-width: 900px) {
-            .product {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            .product-info h1 {
-                font-size: 32px;
-            }
-            .product-image {
-                min-height: 350px;
-                padding: 40px;
-            }
-        }
+        /* 自定义一些小细节 */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="product">
-            <div class="product-image">
-                <div class="product-placeholder">
-                    <div class="device-body">
-                        <div class="device-screen"></div>
-                        <div class="device-button"></div>
-                    </div>
+<body class="bg-white text-gray-900 pb-24">
+
+    <header class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+        <div class="flex items-center gap-8">
+            <div class="w-8 h-8 bg-black rounded-full text-white flex items-center justify-center font-bold">1</div>
+            <nav class="hidden md:flex gap-6 text-sm font-medium">
+                <a href="#" class="hover:text-gray-600">产品</a>
+                <a href="#" class="hover:text-gray-600">应用程序</a>
+                <a href="#" class="flex items-center gap-1 hover:text-gray-600">
+                    交易 <span class="bg-green-100 text-green-700 text-[10px] px-1.5 py-0.5 rounded-full font-bold">0 Fee</span>
+                </a>
+                <a href="#" class="hover:text-gray-600">开发者</a>
+                <a href="#" class="hover:text-gray-600">资源</a>
+                <a href="#" class="hover:text-gray-600">技术支持</a>
+                <a href="#" class="hover:text-gray-600">博客</a>
+            </nav>
+        </div>
+        <div class="flex items-center gap-6 text-sm font-medium">
+            <button class="flex items-center gap-1 hover:text-gray-600">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                简体中文
+            </button>
+            <button class="hover:text-gray-600">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+            </button>
+            <button class="bg-[#2ecc71] text-white px-4 py-1.5 rounded-full flex items-center gap-2 hover:bg-green-500 transition">
+                下载
+                <div class="bg-black text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px]">1</div>
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-12 flex flex-col lg:flex-row gap-16">
+
+        <div class="lg:w-1/2 flex flex-col items-center relative">
+            <button class="absolute left-0 top-1/2 -translate-y-1/2 text-gray-400 hover:text-black">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+
+            <div class="w-72 h-96 bg-gray-800 rounded-lg shadow-2xl relative overflow-hidden border border-gray-700 flex flex-col items-center p-6">
+                <div class="w-full h-32 bg-black rounded mb-4 flex items-center justify-center border border-gray-900 shadow-inner">
+                    <div class="w-6 h-6 bg-white rounded-full text-black flex items-center justify-center font-bold text-xs">1</div>
+                </div>
+                <div class="flex gap-4 mb-10 text-gray-500">
+                    <div class="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center">⏻</div>
+                    <div class="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center text-orange-500">∧</div>
+                    <div class="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center text-orange-500">∨</div>
+                    <div class="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center">○</div>
+                </div>
+                <div class="w-full flex-1 border border-gray-700 rounded bg-gray-900 opacity-80 relative flex items-center justify-center overflow-hidden">
+                    <div class="absolute w-full h-full" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.05) 10px, rgba(255,255,255,0.05) 20px);"></div>
+                    <span class="text-orange-500 text-4xl font-bold z-10 opacity-80">₿</span>
                 </div>
             </div>
-            <div class="product-info">
-                <span class="badge">BTC Only</span>
-                <h1>OneKey Classic 1S Pure</h1>
-                <p class="subtitle">比特币硬件钱包 · 专为BTC打造</p>
-                <div class="price">
-                    ¥699
-                    <span class="original">¥899</span>
-                </div>
-                <div class="features">
-                    <h3>产品特点</h3>
-                    <ul>
-                        <li>专为比特币设计，仅支持 BTC 资产</li>
-                        <li>EAL 6+ 安全芯片，银行级安全防护</li>
-                        <li>完全开源固件，透明可审计</li>
-                        <li>蓝牙 + USB-C 双模连接</li>
-                        <li>支持比特币多重签名</li>
-                        <li>1.28英寸彩色显示屏，清晰可视</li>
-                        <li>机身仅重 30g，便携易携带</li>
-                    </ul>
-                </div>
-                <button class="btn-buy">立即购买</button>
+
+            <button class="absolute right-0 top-1/2 -translate-y-1/2 text-gray-400 hover:text-black">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+
+            <div class="mt-8 flex gap-2">
+                <div class="h-0.5 w-12 bg-black"></div>
+                <div class="h-0.5 w-12 bg-gray-200"></div>
+                <div class="h-0.5 w-12 bg-gray-200"></div>
             </div>
         </div>
 
-        <div class="specs">
-            <h2>技术规格</h2>
-            <div class="specs-grid">
-                <div class="spec-card">
-                    <h4>尺寸</h4>
-                    <p>53mm × 35mm × 7.5mm</p>
-                </div>
-                <div class="spec-card">
-                    <h4>重量</h4>
-                    <p>约 30g</p>
-                </div>
-                <div class="spec-card">
-                    <h4>显示屏</h4>
-                    <p>1.28英寸彩色屏幕</p>
-                </div>
-                <div class="spec-card">
-                    <h4>连接方式</h4>
-                    <p>蓝牙 5.0 / USB-C</p>
-                </div>
-                <div class="spec-card">
-                    <h4>安全芯片</h4>
-                    <p>EAL 6+ 认证安全芯片</p>
-                </div>
-                <div class="spec-card">
-                    <h4>支持系统</h4>
-                    <p>iOS / Android / Windows / macOS / Linux</p>
-                </div>
-                <div class="spec-card">
-                    <h4>电池</h4>
-                    <p>100mAh 可充电锂电池</p>
-                </div>
-                <div class="spec-card">
-                    <h4>材质</h4>
-                    <p>航空级铝合金 + 聚碳酸酯</p>
-                </div>
+        <div class="lg:w-1/2">
+            <div class="text-sm text-gray-500 mb-2">硬件钱包</div>
+            <h1 class="text-4xl font-bold mb-3 tracking-tight">OneKey Classic 1S Pure<br>BTC-Only</h1>
+            <p class="text-gray-600 mb-6">专为 HODL 打造 · 无电池 · 代购</p>
+
+            <div class="flex flex-wrap gap-2 mb-8 text-[11px] text-gray-600">
+                <span class="px-2 py-1 rounded border border-green-200 bg-green-50 text-green-700 flex items-center gap-1 font-medium">🛡️ EAL 6+</span>
+                <span class="px-2 py-1 rounded border border-gray-200 flex items-center gap-1">蓝牙</span>
+                <span class="px-2 py-1 rounded border border-gray-200 flex items-center gap-1">USB-C</span>
+                <span class="px-2 py-1 rounded border border-gray-200 flex items-center gap-1">安全密钥</span>
+                <span class="px-2 py-1 rounded border border-gray-200 flex items-center gap-1">全平台支持</span>
+                <span class="px-2 py-1 rounded border border-gray-200 flex items-center gap-1">完全开源</span>
+                <span class="px-2 py-1 rounded border border-gray-200 flex items-center gap-1">无电池</span>
+                <span class="px-2 py-1 rounded border border-gray-200 flex items-center gap-1">BTC-Only 模式</span>
             </div>
+
+            <div class="mb-8">
+                <h3 class="font-medium text-lg mb-4">产品特点</h3>
+                <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-start gap-3">
+                        <span class="text-green-500 mt-0.5">✓</span>
+                        <span>专为比特币设计，仅支持 BTC 资产</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-green-500 mt-0.5">✓</span>
+                        <span>EAL 6+ 安全芯片，银行级安全防护</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-green-500 mt-0.5">✓</span>
+                        <span>完全开源固件，透明可审计</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-green-500 mt-0.5">✓</span>
+                        <span>蓝牙 + USB-C 双模连接</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-green-500 mt-0.5">✓</span>
+                        <span>支持比特币多重签名</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-green-500 mt-0.5">✓</span>
+                        <span>1.28英寸彩色显示屏，清晰可视</span>
+                    </li>
+                </ul>
+            </div>
+
+            <h3 class="font-medium text-lg mb-4">选择您的型号</h3>
+
+            <div class="space-y-3">
+                <label class="flex items-center justify-between p-4 border border-gray-200 rounded-xl cursor-pointer hover:border-gray-300 transition">
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-12 bg-gray-900 rounded-sm"></div>
+                        <div>
+                            <div class="font-medium">OneKey Classic 1S</div>
+                            <div class="text-xs text-gray-500">内置电池</div>
+                        </div>
+                    </div>
+                    <div class="font-medium">$99</div>
+                </label>
+
+                <label class="flex items-center justify-between p-4 border border-gray-200 rounded-xl cursor-pointer hover:border-gray-300 transition">
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-12 bg-gray-100 rounded-sm border border-gray-200"></div>
+                        <div>
+                            <div class="font-medium">OneKey Classic 1S Pure</div>
+                            <div class="text-xs text-gray-500">无电池</div>
+                        </div>
+                    </div>
+                    <div class="font-medium">$79</div>
+                </label>
+
+                <label class="flex items-center justify-between p-4 border-2 border-black rounded-xl cursor-pointer bg-gray-50">
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-12 bg-gray-800 rounded-sm border border-gray-700 flex flex-col">
+                            <div class="h-1/3 w-full bg-black"></div>
+                            <div class="flex-1 w-full flex items-center justify-center text-orange-500 text-[8px]">₿</div>
+                        </div>
+                        <div>
+                            <div class="font-medium">OneKey Classic 1S Pure / BTC-Only</div>
+                            <div class="text-xs text-gray-500">专为比特币设计 · 无电池 · 代购</div>
+                        </div>
+                    </div>
+                    <div class="font-medium">¥699</div>
+                </label>
+            </div>
+
+            <p class="mt-4 text-xs text-gray-500">
+                出厂预装 BTC 专用系统。可随时切换至多币种系统。
+                <a href="#" class="text-[#2ecc71] hover:underline">了解更多</a>
+            </p>
+        </div>
+    </main>
+
+    <div class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 py-4 px-6 flex items-center justify-between z-50">
+        <div class="flex flex-col">
+            <div class="flex items-center gap-1 font-medium text-sm">
+                配送到 中国
+                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="text-xs text-gray-500">预计 7-14 天内送达</div>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <span class="font-medium text-lg">¥699</span>
+            <button class="px-6 py-2.5 border border-black rounded-full font-medium text-sm hover:bg-gray-50 transition">
+                加入购物袋
+            </button>
+            <button class="px-6 py-2.5 bg-[#2ecc71] hover:bg-green-500 text-white rounded-full font-medium text-sm transition shadow-sm">
+                现在购买
+            </button>
         </div>
     </div>
+
+    <div class="fixed right-6 bottom-24 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center cursor-pointer shadow-lg hover:bg-gray-800 transition z-50">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+    </div>
+
 </body>
 </html>
