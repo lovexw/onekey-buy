@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneKey Classic 1S Pure / BTC-Only | 硬件钱包</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Product Hero Section */
+        .product-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            padding: 60px 0;
+            align-items: center;
+        }
+        
+        .product-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .main-image {
+            width: 100%;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 120px;
+        }
+        
+        .thumbnail-row {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .thumbnail {
+            width: 80px;
+            height: 80px;
+            background: #f5f5f5;
+            border-radius: 12px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+        
+        .thumbnail:hover, .thumbnail.active {
+            border-color: #000;
+        }
+        
+        .product-info h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .product-category {
+            font-size: 14px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+        
+        .product-tagline {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 24px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .feature-icon {
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+        }
+        
+        /* Model Selection */
+        .model-selection {
+            margin-bottom: 24px;
+        }
+        
+        .model-selection h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        
+        .model-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .model-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .model-option:hover {
+            border-color: #000;
+        }
+        
+        .model-option.selected {
+            border-color: #000;
+            background: #f9f9f9;
+        }
+        
+        .model-option.btc-only {
+            border-color: #f59e0b;
+            background: #fffbeb;
+        }
+        
+        .model-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .model-icon {
+            width: 40px;
+            height: 40px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .model-name {
+            font-weight: 600;
+        }
+        
+        .model-desc {
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .model-price {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        /* Bundles */
+        .bundles {
+            margin-bottom: 24px;
+        }
+        
+        .bundles h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        
+        .bundle-options {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .bundle-option {
+            flex: 1;
+            padding: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .bundle-option:hover {
+            border-color: #000;
+        }
+        
+        .bundle-name {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .bundle-desc {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .bundle-price {
+            font-weight: 600;
+            color: #667eea;
+        }
+        
+        /* Price Section */
+        .price-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+        
+        .price {
+            font-size: 36px;
+            font-weight: 700;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .btn {
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: #000;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #333;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #000;
+        }
+        
+        .btn-secondary:hover {
+            background: #f5f5f5;
+        }
+        
+        /* Shipping Info */
+        .shipping-info {
+            display: flex;
+            gap: 32px;
+            padding: 16px 0;
+            margin-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .shipping-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        /* Features Section */
+        .features-section {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+        
+        .section-title {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .features-grid-full {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            display: flex;
+            gap: 20px;
+        }
+        
+        .feature-icon-large {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+        
+        .feature-content h4 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        
+        .feature-content p {
+            color: #666;
+            font-size: 15px;
+        }
+        
+        /* What's in Box */
+        .box-section {
+            padding: 80px 0;
+        }
+        
+        .box-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .box-list {
+            list-style: none;
+        }
+        
+        .box-list li {
+            padding: 16px 0;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .box-list li::before {
+            content: "✓";
+            color: #22c55e;
+            font-weight: bold;
+        }
+        
+        .box-image {
+            width: 100%;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+        }
+        
+        /* Specs Section */
+        .specs-section {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+        
+        .specs-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+        
+        .specs-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px;
+            background: white;
+            border-radius: 8px;
+        }
+        
+        .spec-label {
+            color: #666;
+        }
+        
+        .spec-value {
+            font-weight: 600;
+        }
+        
+        .specs-image {
+            width: 100%;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+        }
+        
+        /* Reviews Section */
+        .reviews-section {
+            padding: 80px 0;
+        }
+        
+        .rating-overview {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        
+        .rating-score {
+            font-size: 48px;
+            font-weight: 700;
+        }
+        
+        .rating-stars {
+            color: #f59e0b;
+            font-size: 24px;
+        }
+        
+        .rating-count {
+            color: #666;
+        }
+        
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        
+        .review-card {
+            padding: 24px;
+            background: #f9f9f9;
+            border-radius: 12px;
+        }
+        
+        .reviewer-name {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .review-stars {
+            color: #f59e0b;
+            margin-bottom: 8px;
+        }
+        
+        .review-text {
+            color: #555;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            color: #666;
+        }
+        
+        /* Destination Selector */
+        .destination-selector {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 16px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 16px;
+            width: fit-content;
+        }
+        
+        .product-link {
+            color: #667eea;
+            text-decoration: underline;
+            font-size: 14px;
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+        
+        @media (max-width: 768px) {
+            .product-hero {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .bundle-options {
+                flex-direction: column;
+            }
+            
+            .features-grid-full {
+                grid-template-columns: 1fr;
+            }
+            
+            .box-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .specs-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .review-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Product Hero -->
+        <section class="product-hero">
+            <div class="product-gallery">
+                <div class="main-image">🔐</div>
+                <div class="thumbnail-row">
+                    <div class="thumbnail active">🔐</div>
+                    <div class="thumbnail">📱</div>
+                    <div class="thumbnail">🔒</div>
+                    <div class="thumbnail">⚡</div>
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <p class="product-category">加密硬件钱包</p>
+                <h1>OneKey Classic 1S Pure / BTC-Only</h1>
+                <p class="product-tagline">无电池，专为 HODL 打造。</p>
+                
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <span class="feature-icon">🛡️</span>
+                        <span>EAL 6+</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📡</span>
+                        <span>蓝牙</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🔌</span>
+                        <span>USB-C</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🔑</span>
+                        <span>安全密钥</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">💻</span>
+                        <span>全平台支持</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">💰</span>
+                        <span>支持 30,000+ 代币</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🔋</span>
+                        <span>无电池</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">👁️</span>
+                        <span>Clear Signing</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">₿</span>
+                        <span>BTC-Only 模式</span>
+                    </div>
+                </div>
+                
+                <!-- Model Selection -->
+                <div class="model-selection">
+                    <h3>选择您的型号</h3>
+                    <div class="model-options">
+                        <div class="model-option">
+                            <div class="model-info">
+                                <div class="model-icon">📱</div>
+                                <div>
+                                    <div class="model-name">OneKey Classic 1S</div>
+                                    <div class="model-desc">内置电池</div>
+                                </div>
+                            </div>
+                            <div class="model-price">$99</div>
+                        </div>
+                        <div class="model-option">
+                            <div class="model-info">
+                                <div class="model-icon">🔋</div>
+                                <div>
+                                    <div class="model-name">OneKey Classic 1S Pure</div>
+                                    <div class="model-desc">无电池</div>
+                                </div>
+                            </div>
+                            <div class="model-price">$79</div>
+                        </div>
+                        <div class="model-option selected btc-only">
+                            <div class="model-info">
+                                <div class="model-icon">₿</div>
+                                <div>
+                                    <div class="model-name">OneKey Classic 1S Pure / BTC-Only</div>
+                                    <div class="model-desc">专为比特币设计·无需电池</div>
+                                </div>
+                            </div>
+                            <div class="model-price">$79</div>
+                        </div>
+                    </div>
+                    <a href="https://help.onekey.so/articles/13276348" class="product-link">出厂预装 BTC 专用系统。可随时切换至多币种系统。了解更多</a>
+                </div>
+                
+                <!-- Bundles -->
+                <div class="bundles">
+                    <h3>套装更优惠</h3>
+                    <div class="bundle-options">
+                        <div class="bundle-option">
+                            <div class="bundle-name">OneKey KeyTag</div>
+                            <div class="bundle-desc">由航空级钛合金制成的强大钱包备份套件，内含 2 个 KeyTag。</div>
+                            <div class="bundle-price">+$59</div>
+                        </div>
+                        <div class="bundle-option">
+                            <div class="bundle-name">OneKey Sifu</div>
+                            <div class="bundle-desc">通过一对一的在线会话，获得有关设置您的 OneKey 硬件钱包的帮助。</div>
+                            <div class="bundle-price">+$99</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Destination -->
+                <div class="destination-selector">
+                    <span>📍</span>
+                    <span>选择配送目的地</span>
+                </div>
+                
+                <!-- Price & Buttons -->
+                <div class="price-section">
+                    <div>
+                        <div class="price">$79</div>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn btn-secondary">加入购物袋</button>
+                        <button class="btn btn-primary">现在购买</button>
+                    </div>
+                </div>
+                
+                <!-- Shipping Info -->
+                <div class="shipping-info">
+                    <div class="shipping-item">
+                        <span>🚚</span>
+                        <span>订单满 $99 全球免费送货</span>
+                    </div>
+                    <div class="shipping-item">
+                        <span>💬</span>
+                        <span>24/7 客服支持</span>
+                    </div>
+                    <a href="https://help.onekey.so/articles/11461245" class="shipping-item" style="color: #667eea;">
+                        <span>📦</span>
+                        <span>邮递及退货</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Security Features -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">高级安全功能</h2>
+            <div class="features-grid-full">
+                <div class="feature-card">
+                    <div class="feature-icon-large">⏱️</div>
+                    <div class="feature-content">
+                        <h4>6 分钟离线设置</h4>
+                        <p>通过完全离线入网，几分钟内即可完成加密安全设置。您的密钥永不触网，由 EAL6+ 安全芯片与加密连接保护。</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-large">✍️</div>
+                    <div class="feature-content">
+                        <h4>放心签名</h4>
+                        <p>确认前查看每一项详情，并使用 SignGuard 识别诈骗与威胁，有助于减少钓鱼和代价高昂的错误。</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-large">💼</div>
+                    <div class="feature-content">
+                        <h4>一个钱包，为你的资产而生</h4>
+                        <p>根据需求选择钱包版本，从仅支持比特币的版本到支持多链多资产的全功能钱包，并可无缝配合 OneKey App 及主流钱包软件使用。</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-large">🔍</div>
+                    <div class="feature-content">
+                        <h4>可验证的代码，经审计的安全</h4>
+                        <p>固件与应用开源且可复现构建，可在 GitHub 上独立验证，并经过第三方安全审计。</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-large">🛡️</div>
+                    <div class="feature-content">
+                        <h4>EAL6+ 安全芯片，硬件级保护</h4>
+                        <p>采用 EAL6+ 安全芯片，用于安全存储密钥和执行关键操作，可抵御物理篡改与侧信道攻击。</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-large">📦</div>
+                    <div class="feature-content">
+                        <h4>从开箱到日常使用的安全</h4>
+                        <p>收货时检查防篡改包装，首次激活时验证正版固件，日常使用中通过 PIN 保护安全。多次失败或检测到篡改后，数据将自动清除。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- What's in the Box -->
+    <section class="box-section">
+        <div class="container">
+            <h2 class="section-title">包装内包含</h2>
+            <div class="box-content">
+                <ul class="box-list">
+                    <li>OneKey Classic 1S</li>
+                    <li>USB-C 数据线</li>
+                    <li>恢复表 x3</li>
+                </ul>
+                <div class="box-image">📦</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Tech Specs -->
+    <section class="specs-section">
+        <div class="container">
+            <h2 class="section-title">技术规格</h2>
+            <div class="specs-content">
+                <div class="specs-list">
+                    <div class="spec-item">
+                        <span class="spec-label">尺寸</span>
+                        <span class="spec-value">62 × 33.6 × 9.6 mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">重量</span>
+                        <span class="spec-value">约 21g</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">显示屏</span>
+                        <span class="spec-value">1.3" AMOLED</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">分辨率</span>
+                        <span class="spec-value">360 × 360 pixels</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">电池</span>
+                        <span class="spec-value">无 (Pure 版本)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">连接</span>
+                        <span class="spec-value">USB-C, 蓝牙 5.0</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">安全芯片</span>
+                        <span class="spec-value">EAL6+</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">材质</span>
+                        <span class="spec-value">不锈钢 + 塑料</span>
+                    </div>
+                </div>
+                <div class="specs-image">📐</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Reviews -->
+    <section class="reviews-section">
+        <div class="container">
+            <h2 class="section-title">用户评价</h2>
+            <div class="rating-overview">
+                <div class="rating-score">4.8</div>
+                <div>
+                    <div class="rating-stars">★★★★★</div>
+                    <div class="rating-count">基于 218 条评价</div>
+                </div>
+                <div style="margin-left: auto;">
+                    <div>97% 推荐</div>
+                </div>
+            </div>
+            <div class="review-grid">
+                <div class="review-card">
+                    <div class="reviewer-name">匿名</div>
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">非常好用，希望继续加油！</div>
+                </div>
+                <div class="review-card">
+                    <div class="reviewer-name">匿名</div>
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">nice product, very safelly</div>
+                </div>
+                <div class="review-card">
+                    <div class="reviewer-name">Maria M.</div>
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">I like it. Easy to use and doesn't require a phone. I do wish it could handle HBAR and a few other coins but other than that it's great.</div>
+                </div>
+                <div class="review-card">
+                    <div class="reviewer-name">Ursula L.</div>
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">Ich bin erst am Anfang. Erst ein kleiner betrag auf OneKey übertragen.</div>
+                </div>
+                <div class="review-card">
+                    <div class="reviewer-name">Volvin I.</div>
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">Easy to use</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">有问题吗?</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>我在哪里可以追踪我的订单?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">订单发货后,我们会通过电子邮件发送追踪链接。您也可以在订单页面上找到它。标签创建后,追踪信息可能需要 24 到 48 小时才会更新。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>我可以更改地址或取消订单吗?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">如果您的订单尚未发货,我们或许可以提供帮助。请尽快联系客服并提供您的订单号。订单发货后通常无法进行更改。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>我的物流显示已送达,但我没有收到包裹。</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">请先与家人、邻居、楼宇工作人员和当地快递公司核实。如果仍然找不到,请联系客服并提供您的订单号和物流详情。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>我可以在同一次结账时使用折扣码和礼品卡吗?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">在大多数情况下,是的。折扣会先应用,然后礼品卡支付剩余余额。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>我的加密货币付款何时确认?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">您的订单将在完成所需的网络确认后得到确认。请在结账时显示的正确网络上支付准确金额。如果您需要帮助,请携带交易哈希值联系客服。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>如何申请退货或保修服务?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">请联系我们的支持团队，提供您的订单详情和问题的简要描述。我们将指导您完成后续步骤。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // Simple interactivity
+        document.querySelectorAll('.model-option').forEach(option => {
+            option.addEventListener('click', () => {
+                document.querySelectorAll('.model-option').forEach(o => o.classList.remove('selected'));
+                option.classList.add('selected');
+                
+                // Update price
+                const price = option.querySelector('.model-price').textContent;
+                document.querySelector('.price').textContent = price;
+            });
+        });
+        
+        document.querySelectorAll('.thumbnail').forEach((thumb, index) => {
+            thumb.addEventListener('click', () => {
+                document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+                thumb.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
